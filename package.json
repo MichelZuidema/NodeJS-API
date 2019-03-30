@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-api",
+  "version": "1.0.0",
+  "description": "The source code of a NodeJS API, this was build to learn more about NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichelZuidema/NodeJS-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichelZuidema/NodeJS-API/issues"
+  },
+  "homepage": "https://github.com/MichelZuidema/NodeJS-API#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "npm": "^6.9.0"
+  }
+}
