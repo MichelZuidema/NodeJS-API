@@ -46,11 +46,23 @@ app.get("/", (req, res) => {
 })
 
 app.get("/users", (req, res) => {
-    const user1 = {firstName: 'Michel', lastName: 'Zuidema'}
-    const user2 = {firstName: 'Cody', lastName: 'Bellinger'}
+    const connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'Kaas@360!420',
+        database: 'api'
+    })
 
-    res.json([user1, user2])
-    res.send("Users")
+    const query = "SELECT * FROM users"
+    connection.query(query, (err, rows, fields) => {
+        if(err) {
+            console.log("Something went wrong: " + err)
+            res.sendStatus(500)
+            return
+        }
+
+        res.json(rows)
+    })
 })
 
 app.listen(3003, () => {
